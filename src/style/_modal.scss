@@ -6,8 +6,16 @@
   overflow-y: auto;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.6);
+
+  @include tablet {
+    padding: 20px;
+  }
+
+  @include mini {
+    padding: 0;
+  }
   
-  &_person {
+  &_sign-up {
     display: flex;
 
   }
@@ -17,6 +25,10 @@
     font-size: 24px;
     text-align: center;
     margin-bottom: 24px;
+
+    @include mobile {
+      font-size: 18px;
+    }
   }
 
   &__body{
@@ -50,6 +62,12 @@
     border-radius: 50%;
     color: #7b7b7b;
     transition: color 0.3s ease-in-out;
+    z-index: 10;
+
+    @include mini {
+      transform: none;
+      box-shadow: 0 0 10px 10px #ccc;
+    }
 
     &:hover {
       color: #000000;
